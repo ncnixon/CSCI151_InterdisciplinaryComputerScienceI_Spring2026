@@ -1,19 +1,14 @@
-# import statements.
 import sys
 import stdio
-import math
 
 argumentLength = len(sys.argv)
 if not (argumentLength == 2):
-    stdio.writeln("usage python absolutevalue.py <int>")
+    stdio.writeln("usage python mysteryprogram.py <int>")
 else:
     integerValue = int(sys.argv[1])
     if integerValue < 0:
-        stdio.writeln(-integerValue)
+        mysteryValue = -integerValue
     else:
-        stdio.writeln(integerValue)
+        mysteryValue = integerValue
 
-    # stdio.writeln(int(math.fabs(integerValue))) above likely is a similar implementation as found in the math module*
-
-
-# arbitrary global code.
+    stdio.writeln(mysteryValue)
