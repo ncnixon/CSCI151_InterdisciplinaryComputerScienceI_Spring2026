@@ -3,13 +3,15 @@ import stdio
 THRESHOLD = 50000
 SELL = 120000
 bitcoinPrice = float(sys.argv[1])
-
+message = ""
 if bitcoinPrice < THRESHOLD:
-    stdio.writeln("BUY")
+    message = "BUY"
 elif bitcoinPrice == THRESHOLD:
-    stdio.writeln("HOLD")
+    message = "HOLD"
 else: # greater than.
     if bitcoinPrice >= SELL:
-        stdio.writeln("SELL")
+        message = "SELL"
     else:
-        stdio.writeln("HODL")
+        message = "HODL"
+
+stdio.writeln(message)
