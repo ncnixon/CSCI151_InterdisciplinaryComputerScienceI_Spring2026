@@ -34,21 +34,6 @@ def binaryRecursive(n):
     numberOfDigits = n.bit_length()
     return _binaryRecursiveHelper(n, numberOfDigits)
 
-def main(argv):
-    assert add("10", "10") == "100" # i.e., does 2 + 2 == 4?
-    '''
-    binaryN = binaryRecursive(6)
-    stdio.writeln(binaryN)
-    binaryN = binaryRecursive(2)
-    stdio.writeln(binaryN)
-    binaryN = binaryRecursive(1)
-    stdio.writeln(binaryN)
-    binaryN = binaryRecursive(0)
-    stdio.writeln(binaryN)
-    binaryN = binaryRecursive(17)
-    stdio.writeln(binaryN)
-    '''
-
 def add(n1, n2):
     # Pad with leading zeros
     max_len = max(len(n1), len(n2))
@@ -94,6 +79,21 @@ def twosComplement(n):
         else:
             continue # not a valid binary number*
     return newString
+
+def main(argv):
+    assert add("10", "10") == "100" # i.e., does 2 + 2 == 4?
+    '''
+    binaryN = binaryRecursive(6)
+    stdio.writeln(binaryN)
+    binaryN = binaryRecursive(2)
+    stdio.writeln(binaryN)
+    binaryN = binaryRecursive(1)
+    stdio.writeln(binaryN)
+    binaryN = binaryRecursive(0)
+    stdio.writeln(binaryN)
+    binaryN = binaryRecursive(17)
+    stdio.writeln(binaryN)
+    '''
 
 if __name__ == '__main__':
     main(sys.argv[1:])
